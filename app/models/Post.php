@@ -28,4 +28,13 @@ class Post
         $result = $this->db->getAll();
         return $result;
     }
+
+    public function getPostById($id)
+    {
+        $this->db->query('SELECT * FROM posts WHERE id=:id');
+        $this->db->bind(':id', $id);
+        $post = $this->db->getOne();
+        return $post;
+    }
+
 }
