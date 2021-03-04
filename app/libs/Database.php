@@ -56,7 +56,8 @@ class Database
     }
 
     public function execute(){
-        $this->stmt->execute();
+        return $this->stmt->execute();
+
     }
 
     public function getOne(){
